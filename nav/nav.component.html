@@ -1,0 +1,24 @@
+
+<!-- Will need Angular Routes setup -->
+<nav class="desktop">
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <a routerLink="/blog" routerLinkActive="active">Blog</a>
+  <a routerLink="/login" routerLinkActive="active">Login</a>
+  <a routerLink="/logout" routerLinkActive="active">Logout</a>
+  <a routerLink="/signup" routerLinkActive="active">Signup</a>
+</nav>
+
+<nav class="mobile">
+  <div class="container noselect" [class.open]="menuOpen" (click)="toogleMenu();">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+</nav>
+<div class="mobile-menu" (click)="toogleMenu();" [class.open]="menuOpen" [class.closed]="!menuOpen">
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <a routerLink="/blog" routerLinkActive="active">Blog</a>
+  <a routerLink="/login" routerLinkActive="active">Login</a>
+  <a routerLink="/logout" routerLinkActive="active">Logout</a>
+  <a routerLink="/signup" routerLinkActive="active">Signup</a>
+</div>
